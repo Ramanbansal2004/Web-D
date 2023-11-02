@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="itsme.css" />
+    <script src="web.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar sidebar" id="xyz">
+        <nav>
+          <ul class="menu__box">
+            <li></li>
+            <li><a href="Motor.html">Home</a></li>
+            <li><a href="intro.html">Calculator</a></li>
+            <li><a href="services.html">Projects</a></li>
+            <li><a href="cv.html">Area of Interest</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main">
+        <div id="side">
+          <img id="x3" src="3 line.png" alt="" onclick="myFunction()" />
+        </div>
+        <div class="infomain container">
+          <div class="Myinfo">
+            <div class="Hello">
+              Hi, My name is Raman Bansal, <br />
+              and I am a passionate.
+            </div>
+            <!-- <div class="Hobby">Developer, Youtuber, Enterpreneur</div> -->
+            <span id="element" class="Hello"></span>
+            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+            <script>
+              var typed = new Typed("#element", {
+                strings: ["Developer", "Youtuber", "Enterpreneur"],
+                typeSpeed: 50,
+              });
+            </script>
+            <div>
+              <button>Download CV</button>
+              <button>Contact Me</button>
+              <button onclick="getLocation()">Try It</button>
+              <p id="demo"></p>
+              <script>
+                var x = document.getElementById("demo");
+                function getLocation() {
+                  if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                  } else {
+                    x.innerHTML =
+                      "Geolocation is not supported by this browser.";
+                  }
+                }
+
+                function showPosition(position) {
+                  x.innerHTML =
+                    "Latitude: " +
+                    position.coords.latitude +
+                    "<br>Longitude: " +
+                    position.coords.longitude;
+                }
+              </script>
+              <h1>Hello IITR Janta pls review my website</h1>
+              <form>
+                <input type="radio" name="fav_language" />
+                <label for="1">Best</label><br />
+                <input type="radio" name="fav_language" />
+                <label for="2">Good</label><br />
+                <input type="radio" name="fav_language" />
+                <label for="3">Average</label><br />
+                <label for="4">Time of response</label><br />
+                <input type="time" name="fav_language" />
+              </form>
+              <!-- <iframe src="Myself.html" width="50%"></iframe> -->
+            </div>
+          </div>
+          <div class="Mypic">
+            <img src="Raman.jpeg" alt="My image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
